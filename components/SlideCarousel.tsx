@@ -57,24 +57,6 @@ export function SlideCarousel({ title, slides }: SlideCarouselProps) {
                 allowFullScreen
               />
             </div>
-          ) : currentSlide.composition === 'guess-the-library-slide-1' && currentSlide.frameSrc ? (
-            <div className="relative aspect-[16/9] w-full bg-[#f5f0e6]">
-              <Image
-                key={currentSlide.frameSrc}
-                src={currentSlide.frameSrc}
-                alt={currentSlide.alt ?? `${title} slide ${index + 1}`}
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 900px, 100vw"
-              />
-              <img
-                key={currentSlide.src}
-                src={currentSlide.src}
-                alt=""
-                aria-hidden="true"
-                className="absolute left-[31.7%] top-[27.8%] w-[18.6%] rounded-[1.4%] shadow-[0_18px_40px_rgba(0,0,0,0.14)]"
-              />
-            </div>
           ) : currentSlide.src.endsWith('.gif') ? (
             <img
               key={currentSlide.src}

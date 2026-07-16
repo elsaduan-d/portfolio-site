@@ -71,7 +71,7 @@ function ProjectImage({ project }: { project: ProjectWithAssets }) {
 
   if (!image) {
     return (
-      <div className="relative flex aspect-[4/3] overflow-hidden rounded-[24px] bg-[radial-gradient(circle_at_28%_25%,rgba(255,255,255,0.78),transparent_28%),linear-gradient(135deg,rgba(35,32,28,0.92),rgba(124,112,92,0.52))] p-5 text-white">
+      <div className="relative flex aspect-[16/10] overflow-hidden rounded-[24px] bg-[radial-gradient(circle_at_28%_25%,rgba(255,255,255,0.78),transparent_28%),linear-gradient(135deg,rgba(35,32,28,0.92),rgba(124,112,92,0.52))] p-5 text-white">
         <div className="mt-auto">
           <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/62">{project.category}</p>
           <p className="mt-2 max-w-[14rem] font-serif text-2xl leading-tight">{project.title}</p>
@@ -81,12 +81,12 @@ function ProjectImage({ project }: { project: ProjectWithAssets }) {
   }
 
   return (
-    <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] bg-stone-100">
+    <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] bg-[#f7f3ea]">
       <Image
-        src={image}
+        src={image.src}
         alt={`${project.title} preview`}
         fill
-        className="object-cover transition duration-700 group-hover:scale-[1.04]"
+        className={`${image.fit === 'contain' ? 'object-contain' : 'object-cover'} transition duration-700 group-hover:scale-[1.04]`}
         sizes="(min-width: 1280px) 360px, (min-width: 768px) 50vw, 100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-80" />
@@ -95,8 +95,10 @@ function ProjectImage({ project }: { project: ProjectWithAssets }) {
 }
 
 function getProjectImage(project: ProjectWithAssets) {
-  if (project.slug === 'eye-tracking-analysis') return '/eye-tracking/design-b-stimulus.jpg';
-  if (project.demoSlides?.[0]?.type === 'image') return project.demoSlides[0].frameSrc ?? project.demoSlides[0].src;
-  if (project.slides?.[0]?.type === 'image') return project.slides[0].frameSrc ?? project.slides[0].src;
+  if (project.slug === 'boston-easytrip') return { src: '/project-covers/boston-easytrip-cover.png', fit: 'contain' as const };
+  if (project.slug === 'word-cross-wordy') return { src: '/project-covers/word-cross-wordy-cover.png', fit: 'contain' as const };
+  if (project.slug === 'eye-tracking-analysis') return { src: '/eye-tracking/design-b-stimulus.jpg', fit: 'cover' as const };
+  if (project.demoSlides?.[0]?.type === 'image') return { src: project.demoSlides[0].frameSrc ?? project.demoSlides[0].src, fit: 'cover' as const };
+  if (project.slides?.[0]?.type === 'image') return { src: project.slides[0].frameSrc ?? project.slides[0].src, fit: 'cover' as const };
   return null;
 }
