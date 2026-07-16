@@ -100,6 +100,7 @@ function getProjectImage(project: ProjectWithAssets) {
   if (project.slug === 'taskmate') return { src: '/project-covers/taskmate-cover.png', fit: 'cover' as const };
   if (project.slug === 'teacher-reflection-lab') return { src: '/project-covers/teacher-reflection-lab-cover.png', fit: 'cover' as const };
   if (project.slug === 'table-craft') return { src: '/project-covers/table-craft-cover.png', fit: 'cover' as const };
+  if (project.slug === 'edtech-analyzer') return { src: '/project-covers/edtech-analyzer-cover.png', fit: 'cover' as const };
   if (project.slug === 'a-ronins-reckoning') return { src: '/project-covers/a-ronins-reckoning-cover.png', fit: 'cover' as const };
   if (project.slug === 'eye-tracking-analysis') return { src: '/project-covers/eye-tracking-analysis-cover.png', fit: 'cover' as const };
   if (project.slug === 'how-people-learn-for-parents') return { src: '/project-covers/hgse-foundation-course-cover.png', fit: 'cover' as const };
