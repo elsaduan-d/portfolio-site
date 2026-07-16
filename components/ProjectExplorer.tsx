@@ -98,7 +98,7 @@ function getProjectImage(project: ProjectWithAssets) {
   if (project.slug === 'boston-easytrip') return { src: '/project-covers/boston-easytrip-cover.png', fit: 'contain' as const };
   if (project.slug === 'word-cross-wordy') return { src: '/project-covers/word-cross-wordy-cover.png', fit: 'contain' as const };
   if (project.slug === 'a-ronins-reckoning') return { src: '/project-covers/a-ronins-reckoning-cover.png', fit: 'cover' as const };
-  if (project.slug === 'eye-tracking-analysis') return { src: '/eye-tracking/design-b-stimulus.jpg', fit: 'cover' as const };
+  if (project.slug === 'eye-tracking-analysis') return { src: '/project-covers/eye-tracking-analysis-cover.png', fit: 'cover' as const };
   if (project.demoSlides?.[0]?.type === 'image') return { src: project.demoSlides[0].frameSrc ?? project.demoSlides[0].src, fit: 'cover' as const };
   if (project.slides?.[0]?.type === 'image') return { src: project.slides[0].frameSrc ?? project.slides[0].src, fit: 'cover' as const };
   return null;
