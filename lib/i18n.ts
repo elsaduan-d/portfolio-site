@@ -33,6 +33,10 @@ export const dictionary: Record<Locale, Dictionary> = {
     'home.overviewBody': 'My work spans AI-assisted prototyping, product testing, educational design, and evidence-driven analysis for user-facing learning products. I’m especially interested in how interface decisions, feedback systems, and content structure shape what people actually learn.',
     'home.aboutMe': 'About Me',
     'home.viewExperience': 'View Experience',
+    'home.quote': 'I design user-centered learning products that make emerging technology feel usable, human, and evidence-informed.',
+    'home.quotePrefix': 'I design ',
+    'home.quoteTag': 'user-centered learning products',
+    'home.quoteSuffix': ' that make emerging technology feel usable, human, and evidence-informed.',
     'page.about.eyebrow': 'About',
     'page.about.title': 'A product and learning design practice shaped by evidence, usability, and educational intent.',
     'page.about.intro': 'I work at the intersection of product management, learning design, AI education, and evidence-based EdTech. My experience includes AI-assisted prototyping, product testing, data analysis, and research-informed design for user-facing learning products.',
@@ -48,6 +52,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     'about.p1': 'I’m most interested in products that need to be both useful and pedagogically thoughtful. That usually means working across product structure, user testing, interface decisions, and content logic rather than treating design, research, and strategy as separate tracks.',
     'about.p2': 'My projects often sit at the edge of emerging technology and human learning: teacher reflection tools, educational game concepts, decision-support websites, and product analyses that ask not just whether a system works, but what kinds of learning behavior it encourages.',
     'about.p3': 'My recent work has focused on user-centered AIGC product research, model output evaluation, and experiments with agent-based workflows. I connect prototype decisions with measurable outcomes by refining frontend interactions, mapping workflows, translating research findings into campaign KPIs, and coordinating cross-functional feedback loops that help early product ideas move toward launch.',
+    'about.bio': 'I design learning and AI product experiences that make emerging technology feel more usable, human-centered, and evidence-informed. I like working where product strategy, learning design, and user research meet: clarifying messy problems, testing how people actually respond, and turning early ideas into clearer workflows and interface decisions. My recent work includes AIGC product research, model output evaluation, prototype testing, frontend interaction refinement, and cross-functional feedback loops that help product ideas move toward launch.',
     'about.education': 'Education',
     'about.harvard': 'Harvard Graduate School of Education',
     'about.harvardDegree': 'Ed.M. in Learning Design, Innovation, and Technology',
@@ -77,6 +82,8 @@ export const dictionary: Record<Locale, Dictionary> = {
     'common.openPdf': 'Open PDF',
     'common.backProjects': 'Back to projects',
     'common.viewFullCaseStudy': 'View Full Case Study',
+    'common.all': 'All',
+    'common.filter': 'Filter',
     'footer.focus': 'Product Management · Learning Design · AI Education · Evidence-Based EdTech'
   },
   zh: {
@@ -105,6 +112,10 @@ export const dictionary: Record<Locale, Dictionary> = {
     'home.overviewBody': '我的工作涵盖 AI 辅助原型、产品测试、教育设计和面向用户学习产品的循证分析。我尤其关注界面决策、反馈系统和内容结构如何影响真实的学习行为。',
     'home.aboutMe': '关于我',
     'home.viewExperience': '查看经历',
+    'home.quote': '我设计以用户为中心的学习产品，让新兴技术变得可用、人性化，并且有证据支撑。',
+    'home.quotePrefix': '我设计',
+    'home.quoteTag': '以用户为中心的学习产品',
+    'home.quoteSuffix': '，让新兴技术变得可用、人性化，并且有证据支撑。',
     'page.about.eyebrow': '关于',
     'page.about.title': '以证据、可用性和教育意图为基础的产品与学习设计实践。',
     'page.about.intro': '我工作于产品管理、学习设计、AI 教育和循证教育科技的交叉领域。我的经验包括 AI 辅助原型、产品测试、数据分析，以及面向用户学习产品的研究驱动设计。',
@@ -120,6 +131,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     'about.p1': '我最感兴趣的是既有实际用途、又在教学上经过思考的产品。这通常意味着我会同时关注产品结构、用户测试、界面决策和内容逻辑，而不是把设计、研究和策略割裂开来。',
     'about.p2': '我的项目常常位于新兴技术与人类学习的交界处：教师反思工具、教育游戏概念、决策支持网站和产品分析。这些项目不仅追问系统是否有效，也关注它鼓励了怎样的学习行为。',
     'about.p3': '我近期的工作聚焦于以用户为中心的 AIGC 产品研究、模型输出评估和 agent 工作流实验。我会把原型决策和可衡量结果连接起来，包括优化前端交互、梳理工作流、将研究发现转化为营销 KPI，以及协调跨职能反馈循环，帮助早期产品想法走向上线。',
+    'about.bio': '我设计学习与 AI 产品体验，希望让新兴技术变得更可用、更以用户为中心，也更有证据支撑。我喜欢在产品策略、学习设计和用户研究交汇的地方工作：把复杂问题梳理清楚，观察真实用户如何回应，并把早期想法转化为更清晰的工作流和界面决策。我的近期工作包括 AIGC 产品研究、模型输出评估、原型测试、前端交互优化，以及帮助产品想法走向上线的跨职能反馈循环。',
     'about.education': '教育背景',
     'about.harvard': '哈佛大学教育研究生院',
     'about.harvardDegree': '教育学硕士，学习设计、创新与技术',
@@ -149,6 +161,8 @@ export const dictionary: Record<Locale, Dictionary> = {
     'common.openPdf': '打开 PDF',
     'common.backProjects': '返回项目',
     'common.viewFullCaseStudy': '查看完整案例研究',
+    'common.all': '全部',
+    'common.filter': '筛选',
     'footer.focus': '产品管理 · 学习设计 · AI 教育 · 循证教育科技'
   }
 };
