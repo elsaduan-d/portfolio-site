@@ -97,6 +97,7 @@ function ProjectImage({ project }: { project: ProjectWithAssets }) {
 function getProjectImage(project: ProjectWithAssets) {
   if (project.slug === 'boston-easytrip') return { src: '/project-covers/boston-easytrip-cover.png', fit: 'contain' as const };
   if (project.slug === 'word-cross-wordy') return { src: '/project-covers/word-cross-wordy-cover.png', fit: 'contain' as const };
+  if (project.slug === 'taskmate') return { src: '/project-covers/taskmate-cover.png', fit: 'cover' as const };
   if (project.slug === 'a-ronins-reckoning') return { src: '/project-covers/a-ronins-reckoning-cover.png', fit: 'cover' as const };
   if (project.slug === 'eye-tracking-analysis') return { src: '/project-covers/eye-tracking-analysis-cover.png', fit: 'cover' as const };
   if (project.slug === 'how-people-learn-for-parents') return { src: '/project-covers/hgse-foundation-course-cover.png', fit: 'cover' as const };
