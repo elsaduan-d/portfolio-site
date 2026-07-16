@@ -1,0 +1,22 @@
+[
+  {
+    "type": "image",
+    "src": "/project-slides/word-cross-wordy/slide-1.png",
+    "alt": "Word Cross Wordy slide 1"
+  },
+  {
+    "type": "image",
+    "src": "/project-slides/word-cross-wordy/slide-2.png",
+    "alt": "Word Cross Wordy slide 2"
+  },
+  {
+    "type": "image",
+    "src": "/project-slides/word-cross-wordy/slide-3.png",
+    "alt": "Word Cross Wordy slide 3"
+  },
+  {
+    "type": "image",
+    "src": "/project-slides/word-cross-wordy/slide-4.png",
+    "alt": "Word Cross Wordy slide 4"
+  }
+]

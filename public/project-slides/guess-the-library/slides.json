@@ -1,0 +1,19 @@
+[
+  {
+    "type": "image",
+    "src": "/project-slides/guess-the-library/slide-1.gif",
+    "alt": "Guess the Library slide 1",
+    "composition": "guess-the-library-slide-1",
+    "frameSrc": "/project-slides/guess-the-library/slide-1.png"
+  },
+  {
+    "type": "image",
+    "src": "/project-slides/guess-the-library/slide-2.png",
+    "alt": "Guess the Library slide 2"
+  },
+  {
+    "type": "image",
+    "src": "/project-slides/guess-the-library/slide-3.png",
+    "alt": "Guess the Library slide 3"
+  }
+]
