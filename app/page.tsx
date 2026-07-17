@@ -16,7 +16,7 @@ export default function HomePage() {
         <div className="container-shell relative flex min-h-[88svh] items-end justify-end py-14 pt-28 sm:py-16">
           <div className="w-full max-w-xl pb-4 text-white sm:pb-8 lg:w-[50%] lg:pb-12">
             <blockquote className="font-serif text-2xl leading-[1.18] tracking-tight text-white sm:text-4xl">
-              “{t('home.quotePrefix')}<strong className="font-serif font-semibold text-white">{t('home.quoteTag')}</strong>{t('home.quoteSuffix')}”
+              “{t('home.quote')}”
             </blockquote>
             <p className="mt-6 text-right text-sm font-medium tracking-[0.12em] text-white/74">
               - Elsa Duan
