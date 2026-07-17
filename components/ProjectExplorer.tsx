@@ -7,29 +7,30 @@ import type { Project } from '@/data/projects';
 import type { SlideItem } from '@/lib/slide-assets';
 import { useLanguage } from '@/components/LanguageProvider';
 import { localizeProject } from '@/lib/i18n';
+import { getProjectCategories, PROJECT_FILTERS, type ProjectFilter } from '@/lib/project-taxonomy';
 
 export type ProjectWithAssets = Project & {
   slides: SlideItem[];
 };
 
 export function ProjectExplorer({ items }: { items: ProjectWithAssets[] }) {
-  const [filter, setFilter] = useState('all');
-  const { locale, t } = useLanguage();
+  const [filter, setFilter] = useState<ProjectFilter>('All');
+  const { locale } = useLanguage();
   const localizedItems = useMemo(
     () => items.map((item) => localizeProject(item, locale) as ProjectWithAssets),
     [items, locale]
   );
-  const filters = ['all', ...Array.from(new Set(localizedItems.map((item) => item.category)))];
-  const visibleItems = filter === 'all' ? localizedItems : localizedItems.filter((item) => item.category === filter);
+  const visibleItems =
+    filter === 'All' ? localizedItems : localizedItems.filter((item) => getProjectCategories(item.slug).includes(filter));
 
   useEffect(() => {
-    setFilter('all');
+    setFilter('All');
   }, [locale]);
 
   return (
     <section>
       <div className="mb-8 flex flex-wrap gap-2">
-        {filters.map((item) => {
+        {PROJECT_FILTERS.map((item) => {
           const isActive = item === filter;
           return (
             <button
@@ -40,7 +41,7 @@ export function ProjectExplorer({ items }: { items: ProjectWithAssets[] }) {
                 isActive ? 'border-ink bg-ink text-white' : 'border-line bg-white/55 text-muted hover:border-ink/40 hover:text-ink'
               }`}
             >
-              {item === 'all' ? t('common.all') : item}
+              {item}
             </button>
           );
         })}
@@ -55,9 +56,22 @@ export function ProjectExplorer({ items }: { items: ProjectWithAssets[] }) {
           >
             <ProjectImage project={project} />
             <div className="px-2 pb-3 pt-5">
-              <p className="text-[11px] leading-5 text-muted/75">{project.category}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {getProjectCategories(project.slug).map((category) => (
+                  <span key={category} className="rounded-full border border-line/80 bg-white/55 px-2.5 py-1 text-[10px] leading-none text-muted/75">
+                    {category}
+                  </span>
+                ))}
+              </div>
               <h2 className="mt-1 font-serif text-xl tracking-tight text-ink">{project.title}</h2>
               <p className="mt-3 line-clamp-3 text-sm leading-6 text-muted">{project.description}</p>
+              <div className="mt-4 flex flex-wrap gap-1.5">
+                {project.tags.slice(0, 4).map((tag) => (
+                  <span key={tag} className="rounded-full bg-ink/[0.045] px-2.5 py-1 text-[10px] leading-none text-muted/70">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </Link>
         ))}
@@ -73,7 +87,7 @@ function ProjectImage({ project }: { project: ProjectWithAssets }) {
     return (
       <div className="relative flex aspect-[16/10] overflow-hidden rounded-[24px] bg-[radial-gradient(circle_at_28%_25%,rgba(255,255,255,0.78),transparent_28%),linear-gradient(135deg,rgba(35,32,28,0.92),rgba(124,112,92,0.52))] p-5 text-white">
         <div className="mt-auto">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/62">{project.category}</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/62">{getProjectCategories(project.slug)[0]}</p>
           <p className="mt-2 max-w-[14rem] font-serif text-2xl leading-tight">{project.title}</p>
         </div>
       </div>

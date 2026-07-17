@@ -7,10 +7,12 @@ import { SlideCarousel } from '@/components/SlideCarousel';
 import { useLanguage } from '@/components/LanguageProvider';
 import type { Project } from '@/data/projects';
 import { localizeProject } from '@/lib/i18n';
+import { getProjectCategories } from '@/lib/project-taxonomy';
 
 export function ProjectDetailContent({ children, project }: { children?: React.ReactNode; project: Project }) {
   const { locale, t } = useLanguage();
   const localizedProject = localizeProject(project, locale);
+  const projectCategories = getProjectCategories(project.slug);
   const hasDemo = Boolean(localizedProject.featuredEmbed || localizedProject.videoPath || localizedProject.demoSlides?.length);
 
   return (
@@ -20,7 +22,13 @@ export function ProjectDetailContent({ children, project }: { children?: React.R
           ← {t('common.backProjects')}
         </Link>
         <div className="mt-6 border-t border-line pt-6">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">{localizedProject.category}</p>
+          <div className="flex flex-wrap gap-2">
+            {projectCategories.map((category) => (
+              <span key={category} className="rounded-full border border-line/80 bg-white/55 px-3 py-1.5 text-[11px] leading-none text-muted">
+                {category}
+              </span>
+            ))}
+          </div>
           <h1 className="mt-3 max-w-4xl font-serif text-3xl tracking-tight text-ink sm:text-4xl">{localizedProject.title}</h1>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-muted sm:text-base">{localizedProject.longDescription}</p>
           <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 border-y border-line/70 py-3 text-xs text-muted/75">
