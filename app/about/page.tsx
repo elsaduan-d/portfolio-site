@@ -19,6 +19,20 @@ export default function AboutPage() {
         <p className="mt-5 max-w-4xl text-[15px] leading-8 text-muted sm:text-base">
           {t('about.bio')}
         </p>
+        <div className="mt-8 grid gap-5 border-t border-line/80 pt-6 text-sm leading-6 text-muted md:grid-cols-2">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">{t('about.education')}</p>
+            <p className="mt-3 font-medium text-ink">{t('about.harvard')}</p>
+            <p>{t('about.harvardDegree')}</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-muted/70">{t('about.harvardPeriod')}</p>
+          </div>
+          <div className="md:pt-8">
+            <p className="font-medium text-ink">{t('about.uw')}</p>
+            <p>{t('about.uwDegree')}</p>
+            <p>{t('about.uwMinors')}</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-muted/70">{t('about.uwPeriod')}</p>
+          </div>
+        </div>
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
           {lenses.map(([index, title, body]) => (
             <button
@@ -48,20 +62,6 @@ export default function AboutPage() {
               </span>
             </button>
           ))}
-        </div>
-        <div className="mt-8 grid gap-5 border-t border-line/80 pt-6 text-sm leading-6 text-muted md:grid-cols-2">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">{t('about.education')}</p>
-            <p className="mt-3 font-medium text-ink">{t('about.harvard')}</p>
-            <p>{t('about.harvardDegree')}</p>
-            <p className="text-xs uppercase tracking-[0.16em] text-muted/70">{t('about.harvardPeriod')}</p>
-          </div>
-          <div className="md:pt-8">
-            <p className="font-medium text-ink">{t('about.uw')}</p>
-            <p>{t('about.uwDegree')}</p>
-            <p>{t('about.uwMinors')}</p>
-            <p className="text-xs uppercase tracking-[0.16em] text-muted/70">{t('about.uwPeriod')}</p>
-          </div>
         </div>
       </section>
     </main>
