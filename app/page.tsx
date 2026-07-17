@@ -2,8 +2,6 @@
 
 import { useLanguage } from '@/components/LanguageProvider';
 
-const heroPillars = ['home.focus.product', 'home.focus.learning', 'home.focus.ai', 'home.focus.edtech'];
-
 export default function HomePage() {
   const { t } = useLanguage();
 
@@ -17,20 +15,10 @@ export default function HomePage() {
 
         <div className="container-shell relative flex min-h-[88svh] items-end justify-end py-14 pt-28 sm:py-16">
           <div className="w-full max-w-xl pb-4 text-white sm:pb-8 lg:w-[50%] lg:pb-12">
-            <blockquote className="font-serif text-3xl leading-[1.12] tracking-tight text-white sm:text-5xl">
+            <blockquote className="font-serif text-2xl leading-[1.18] tracking-tight text-white sm:text-4xl">
               “{t('home.quotePrefix')}<strong className="font-serif font-semibold text-white">{t('home.quoteTag')}</strong>{t('home.quoteSuffix')}”
             </blockquote>
-            <div className="mt-7 flex flex-wrap gap-x-4 gap-y-2 border-t border-white/18 pt-4">
-              {heroPillars.map((item) => (
-                <span
-                  key={item}
-                  className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/68"
-                >
-                  {t(item)}
-                </span>
-              ))}
-            </div>
-            <p className="mt-7 text-right text-sm font-medium tracking-[0.12em] text-white/74">
+            <p className="mt-6 text-right text-sm font-medium tracking-[0.12em] text-white/74">
               - Elsa Duan
             </p>
           </div>
