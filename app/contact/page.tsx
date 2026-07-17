@@ -12,9 +12,6 @@ export default function ContactPage() {
         <h1 className="max-w-4xl font-serif text-3xl tracking-tight text-ink sm:text-4xl">
           {t('contact.title')}
         </h1>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-muted sm:text-base">
-          {t('contact.intro')}
-        </p>
       </header>
 
       <section className="grid gap-8 pt-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
