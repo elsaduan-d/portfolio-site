@@ -50,7 +50,12 @@ export function Navbar() {
             })}
             </div>
           </nav>
-          <a href="/Yuzhi-Duan-Resume.docx" className="button-secondary hidden shrink-0 px-3.5 py-2 text-xs md:inline-flex">
+          <a
+            href="/yuzhi-duan-aigc-product-manager-resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="button-secondary hidden shrink-0 px-3.5 py-2 text-xs md:inline-flex"
+          >
             {t('nav.resume')}
           </a>
           <button

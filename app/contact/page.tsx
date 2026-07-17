@@ -44,7 +44,12 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href="/Yuzhi-Duan-Resume.docx" className="button-primary">
+            <a
+              href="/yuzhi-duan-aigc-product-manager-resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="button-primary"
+            >
               {t('nav.resume')}
             </a>
             <a href="mailto:yduan@gse.harvard.edu" className="button-secondary">
