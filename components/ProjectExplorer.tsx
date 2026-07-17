@@ -106,6 +106,7 @@ function getProjectImage(project: ProjectWithAssets) {
   if (project.slug === 'how-people-learn-for-parents') return { src: '/project-covers/hgse-foundation-course-cover.png', fit: 'cover' as const };
   if (project.slug === 'guess-the-library') return { src: '/project-covers/guess-the-library-cover.png', fit: 'cover' as const };
   if (project.slug === 'between-us') return { src: '/project-covers/between-us-cover.png', fit: 'cover' as const };
+  if (project.slug === 'trash-buddies') return { src: '/project-covers/trash-buddies-cover.png', fit: 'cover' as const };
   if (project.demoSlides?.[0]?.type === 'image') return { src: project.demoSlides[0].frameSrc ?? project.demoSlides[0].src, fit: 'cover' as const };
   if (project.slides?.[0]?.type === 'image') return { src: project.slides[0].frameSrc ?? project.slides[0].src, fit: 'cover' as const };
   return null;
